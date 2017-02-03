@@ -53,7 +53,11 @@ function createWindow() {
 
     // devTools
     if (debug) {
-        mainWindow.webContents.openDevTools()
+        let installExtension = require('electron-devtools-offline')
+        
+        installExtension.default(installExtension.REACT_DEVELOPER_TOOLS)
+        .then((name) => mainWindow.webContents.openDevTools())
+        .catch((err) => console.log('An error occurred: ', err))
     }
 
     // menu
