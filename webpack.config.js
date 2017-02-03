@@ -5,7 +5,7 @@ var ExtractTextPlugin = require('extract-text-webpack-plugin')
 
 var APP_PATH = path.resolve(__dirname, './src/app.jsx');
 var MAIN_PATH = path.resolve(__dirname, './app/main.js');
-var BUILD_PATH = process.env.DEV_TARGET === 'web' ? path.join(__dirname, 'builds/web') : path.join(__dirname, 'app');
+var BUILD_PATH = process.env.DEV_TARGET === 'web' ? path.join(__dirname, 'builds/web') : path.join(__dirname, 'app/dist');
 
 var config = {
     entry: {
@@ -30,7 +30,7 @@ var config = {
     devtool: 'source-map',
     devServer: {
         contentBase: "./app",
-        noInfo: true,
+        noInfo: false,
         hot: true,
         inline: true,
         publicPath: 'http://localhost:8080/',
