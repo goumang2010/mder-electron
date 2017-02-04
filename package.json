@@ -35,7 +35,7 @@
     "devtron": "^1.4.0",
     "electron": "^1.4.6",
     "electron-builder": "^8.5.3",
-    "electron-devtools-offline": "^0.1.8",
+    "electron-devtools-offline": "^0.2.0",
     "electron-prebuilt": "^1.4.6",
     "extract-text-webpack-plugin": "^1.0.1",
     "open-browser-webpack-plugin": "0.0.3",
